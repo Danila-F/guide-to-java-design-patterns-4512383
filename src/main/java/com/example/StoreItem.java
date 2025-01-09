@@ -53,10 +53,6 @@ public class StoreItem
             }
             this.name = name;
             this.price = price;
-            this.shortDescription = null;
-            this.longDescription = null;
-            this.stockAvailable = null;
-            this.packagingType = null;
         }
 
         public StoreItemBuilder shortDescription(String shortDescription) {

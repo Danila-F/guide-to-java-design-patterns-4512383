@@ -17,9 +17,6 @@ public class StoreItem
         this.longDescription = storeItemBuilder.longDescription;
         this.stockAvailable = storeItemBuilder.stockAvailable;
         this.packagingType = storeItemBuilder.packagingType;
-        if (name == null || price == null) {
-            throw new IllegalArgumentException("Name and price must not be null");
-        }
     }
 
     public String getName() {
@@ -51,6 +48,9 @@ public class StoreItem
         private String packagingType;
 
         public StoreItemBuilder(String name, Double price) {
+            if (name == null || price == null) {
+                throw new IllegalArgumentException("Name and price must not be null");
+            }
             this.name = name;
             this.price = price;
             this.shortDescription = null;

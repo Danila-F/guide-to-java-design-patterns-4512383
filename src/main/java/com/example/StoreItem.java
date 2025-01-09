@@ -22,6 +22,14 @@ public class StoreItem
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
     @Override
     public String toString() {
         return "StoreItem{" +

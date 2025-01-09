@@ -14,12 +14,18 @@ public class ItemRegistry {
         .packagingType("Can")
         .build();
 
-        addToItemRegistry(item1);
-        addToItemRegistry(item2);
+        var itemInventory = new ItemInventory();
+        itemInventory.addItem(item1);
+        itemInventory.addItem(item2);
+        System.out.println("The items in the inventory are: \n" + itemInventory.getItems());
+        // System.out.println(itemInventory.getSpecificItem(item2.getName(), item2.getPrice()));
+
+        // addToItemRegistry(item1);
+        // addToItemRegistry(item2);
     }
 
-    private static void addToItemRegistry(StoreItem storeItem) {
-        System.out.println("A new item was added to the registry: \n" + storeItem);
-    }
+    // private static void addToItemRegistry(StoreItem storeItem) {
+    //     System.out.println("A new item was added to the registry: \n" + storeItem);
+    // }
 
 }

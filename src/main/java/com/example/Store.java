@@ -2,7 +2,7 @@ package com.example;
 
 public class Store {
 
-    private static final VendingMachine VENDING_MACHINE = new VendingMachine();
+    private static final VendingMachine VENDING_MACHINE = VendingMachine.getVendingMachine();
 
 
     public static void main(String[] args) {

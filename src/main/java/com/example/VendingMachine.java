@@ -4,9 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class VendingMachine {
+public enum VendingMachine {
+
+    INSTANCE;
+
+    private VendingMachine() {}
 
     private static final Map<String, Supplier<Snack>> SnackTypes = new HashMap<>();
+
+    public synchronized static VendingMachine getVendingMachine() {
+        return INSTANCE;
+    }
 
     static {
         SnackTypes.put("ChocolateBar", ChocolateBar::new);
@@ -14,7 +22,7 @@ public class VendingMachine {
         SnackTypes.put("Drink", Drink::new);
     }
 
-    Snack getSnack(String snackType) {
+    public Snack getSnack(String snackType) {
         if (SnackTypes.get(snackType) != null) {
             return SnackTypes.get(snackType).get();
         } else {

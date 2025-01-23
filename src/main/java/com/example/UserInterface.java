@@ -17,6 +17,7 @@ public class UserInterface {
     public ScrollBar getScrollBar() {
         return scrollBar;
     }
+    
     @Override
     public String toString() {
         return "UserInterface{" +

@@ -3,11 +3,16 @@ package com.example;
 public class App {
 
     public static void main(String[] args) {
-        var circle = new Circle();
-        circle.getType();
+        var red = new Red();
+        var blue = new Blue();
 
-        var square = new Square();
+        var circle = new Circle(red);
+        circle.getType();
+        circle.getColor();
+
+        var square = new Square(blue);
         square.getType();
+        square.getColor();
     }
 
 }
